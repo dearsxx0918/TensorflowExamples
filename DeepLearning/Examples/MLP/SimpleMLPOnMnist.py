@@ -22,12 +22,16 @@ class MLPOnMnist(BaseClass.Base):
 
         x = tf.placeholder(tf.float32, [None, n_inputs])
         keep_prob = tf.placeholder(tf.float32)
+
         n_hidden1 = tf.nn.relu(tf.matmul(x, w1) + b1)
         hidden_drop = tf.nn.dropout(n_hidden1, keep_prob)
+
         y = tf.nn.softmax(tf.matmul(hidden_drop, w2) + b2)
         y_ = tf.placeholder(tf.float32, [None, 10])
+
         cross_entropy = tf.reduce_mean(-tf.reduce_sum(y_ * tf.log(y), reduction_indices=[1]))
         train_step = tf.train.AdagradOptimizer(0.3).minimize(cross_entropy)
+
         init = tf.global_variables_initializer()
         sess.run(init)
 
