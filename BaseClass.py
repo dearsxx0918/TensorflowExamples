@@ -1,5 +1,5 @@
 import sys
-
+from sklearn import datasets, model_selection
 
 class Base(object):
     def __init__(self):
@@ -18,6 +18,11 @@ class Base(object):
             self._path = value
         else:
             raise Exception("Path should be a string.")
+
+    @staticmethod
+    def load_datasets_from_sklearn(test_size=0.3, random_state=0, datasets_name="diabetes"):
+        data = getattr(datasets, "load_" + datasets_name)()
+        return model_selection.train_test_split(data.data, data.target, test_size=test_size, random_state=random_state)
 
     def run(self):
         pass
