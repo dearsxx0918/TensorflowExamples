@@ -1,5 +1,5 @@
 import numpy as np
-from sklearn import datasets, linear_model, model_selection
+from sklearn import linear_model
 import BaseClass
 
 
@@ -15,7 +15,6 @@ class NormalLROnDiabetes(BaseClass.Base):
         print('Coefficients:%s, intercept %.2f' % (regr.coef_, regr.intercept_))
         print('Resodual sum of squares:%.2f' % np.mean((regr.predict(X_test) - Y_test) ** 2))
         print('Score:%.2f' % regr.score(X_test, Y_test))
-
 
 if __name__ == "__main__":
     lr = NormalLROnDiabetes()
