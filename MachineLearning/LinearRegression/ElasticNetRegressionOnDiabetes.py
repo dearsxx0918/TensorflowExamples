@@ -30,6 +30,7 @@ class ElasticNetOnDiabetesFitDifferentAlphaAndRhos(BaseClass.Base):
         ax.set_ylabel(r"$\rho$")
         ax.set_zlabel(r"score")
 
+
 if __name__ == "__main__":
     elastic = ElasticNetOnDiabetesFitDifferentAlphaAndRhos()
     elastic.run()

@@ -22,7 +22,8 @@ class RidgeRegressionOnDiabetesFitDifferentAlpha(BaseClass.Base):
         ax.set_ylabel(r"score")
         ax.set_xscale('log')
 
+
 if __name__ == "__main__":
-    redge = RidgeRegressionOnDiabetesFitDifferentAlpha()
-    redge.run()
-    redge.show()
+    ridge = RidgeRegressionOnDiabetesFitDifferentAlpha()
+    ridge.run()
+    ridge.show()

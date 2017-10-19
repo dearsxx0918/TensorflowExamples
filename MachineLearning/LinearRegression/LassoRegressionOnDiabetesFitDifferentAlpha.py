@@ -24,6 +24,6 @@ class LassoRegressionOnDiabetesFitDifferentAlpha(BaseClass.Base):
 
 
 if __name__ == "__main__":
-    redge = LassoRegressionOnDiabetesFitDifferentAlpha()
-    redge.run()
-    redge.show()
+    lasso = LassoRegressionOnDiabetesFitDifferentAlpha()
+    lasso.run()
+    lasso.show()

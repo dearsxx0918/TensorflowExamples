@@ -6,6 +6,7 @@ import numpy as np
 class SoftMaxOnIris(BaseClass.Base):
     def __init__(self):
         super(SoftMaxOnIris, self).__init__()
+
     def run(self):
         X_train, X_test, Y_train, Y_test = self.load_datasets_from_sklearn(data_set_name="iris",
                                                                            test_size=0.25,
@@ -27,6 +28,6 @@ class SoftMaxOnIris(BaseClass.Base):
 
 
 if __name__ == "__main__":
-    redge = SoftMaxOnIris()
-    redge.run()
-    redge.show()
+    softmax = SoftMaxOnIris()
+    softmax.run()
+    softmax.show()
