@@ -1,5 +1,6 @@
 import sys
 from sklearn import datasets, model_selection
+import numpy as np
 
 
 class Base(object):
@@ -44,6 +45,15 @@ class Base(object):
                                                 test_size=test_size,
                                                 random_state=random_state,
                                                 stratify=stratify)
+
+    @staticmethod
+    def create_random_data(size, dimension, curve="sin"):
+        np.random.seed(0)
+        x = 5 * np.random.rand(size, dimension)
+        y = getattr(np, curve)(x).ravel()
+        noise_num = int(size / 5)
+        y[::5] += 3 * (0.5 - np.random.rand(noise_num))
+        return model_selection.train_test_split(x, y, test_size=0.25, random_state=1)
 
     def run(self):
         pass

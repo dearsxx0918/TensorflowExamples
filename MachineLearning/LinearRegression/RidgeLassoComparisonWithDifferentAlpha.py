@@ -9,7 +9,7 @@ class RedgeLassoComparisonWithDifferentAlpha(BaseClass.Base):
     def run(self):
         X_train, X_test, Y_train, Y_test = self.load_datasets_from_sklearn(test_size=0.25)
         alphas = [0.01, 0.02, 0.05, 0.1, 0.2, 0.5, 1, 2, 5, 10, 20, 50, 100, 200, 500, 1000]
-        scores = {"ridge":[],"lasso":[]}
+        scores = {"ridge": [], "lasso": []}
         for i, alpha in enumerate(alphas):
             ridge = linear_model.Ridge(alpha=alpha)
             ridge.fit(X_train, Y_train)
