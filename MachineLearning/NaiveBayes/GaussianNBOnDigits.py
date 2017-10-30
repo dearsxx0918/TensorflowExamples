@@ -15,5 +15,5 @@ class GaussianNBOnDigits(BaseClass.Base):
 
 
 if __name__ == "__main__":
-    t = GaussianNBOnDigits()
-    t.run()
+    gaussian = GaussianNBOnDigits()
+    gaussian.run()

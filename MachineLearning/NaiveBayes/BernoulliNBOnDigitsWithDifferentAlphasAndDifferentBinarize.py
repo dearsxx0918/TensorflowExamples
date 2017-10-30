@@ -35,13 +35,13 @@ class BernoulliNBOnDigitsWithDifferentAlphasAndDifferentBinarize(BaseClass.Base)
                                antialiased=False)
 
         self.fig.colorbar(surf, shrink=0.5, aspect=5)
-        ax.set_title("ElasticNet")
+        ax.set_title("Bernoulli")
         ax.set_xlabel(r"$\alpha$")
         ax.set_ylabel("binarize")
         ax.set_zlabel(r"score")
 
 
 if __name__ == "__main__":
-    elastic = BernoulliNBOnDigitsWithDifferentAlphasAndDifferentBinarize()
-    elastic.run()
-    elastic.show()
+    bernoulli = BernoulliNBOnDigitsWithDifferentAlphasAndDifferentBinarize()
+    bernoulli.run()
+    bernoulli.show()

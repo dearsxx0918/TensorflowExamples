@@ -29,6 +29,6 @@ class MultinomialNBOnDigitsWithDifferentAlphas(BaseClass.Base):
 
 
 if __name__ == "__main__":
-    t = MultinomialNBOnDigitsWithDifferentAlphas()
-    t.run()
-    t.show()
+    multi = MultinomialNBOnDigitsWithDifferentAlphas()
+    multi.run()
+    multi.show()
