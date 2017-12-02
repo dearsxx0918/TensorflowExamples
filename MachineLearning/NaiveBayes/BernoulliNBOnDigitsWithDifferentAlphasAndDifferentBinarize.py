@@ -11,10 +11,10 @@ class BernoulliNBOnDigitsWithDifferentAlphasAndDifferentBinarize(BaseClass.Base)
 
     def run(self):
         X_train, X_test, Y_train, Y_test = self.load_datasets_from_sklearn(test_size=0.25, data_set_name="digits")
-        alphas = np.logspace(-2, 2, 50)
+        alphas = np.logspace(-2, 2, 80)
         min_x = min(np.min(X_train.ravel()), np.min(X_test.ravel())) - 0.1
         max_x = max(np.max(X_train.ravel()), np.max(X_test.ravel())) + 0.1
-        binarizes = np.linspace(min_x, max_x, endpoint=True, num=50)
+        binarizes = np.linspace(min_x, max_x, endpoint=True, num=80)
         test_scores = []
         for alpha in alphas:
             for binarize in binarizes:
