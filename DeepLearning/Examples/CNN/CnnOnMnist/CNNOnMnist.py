@@ -78,6 +78,7 @@ class SimpleCNN(BaseClass.Base):
                                                                  keep_prob: 1.0})
 
 
+
 if __name__ == "__main__":
     c = SimpleCNN()
     c.run()
